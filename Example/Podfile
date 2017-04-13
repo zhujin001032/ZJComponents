@@ -1,0 +1,11 @@
+#use_frameworks!
+install! 'cocoapods', :deterministic_uuids => false
+target 'ZJComponents_Example' do
+  pod 'ZJComponents', :path => '../'
+
+  target 'ZJComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

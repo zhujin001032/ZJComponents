@@ -1,0 +1,1 @@
+../../../../../UtilComponent/UIDeviceUtil/UIDevice+MKResolution.h

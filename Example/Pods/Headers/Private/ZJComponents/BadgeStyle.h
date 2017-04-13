@@ -1,0 +1,1 @@
+../../../../../UtilComponent/BadgeUtil/BadgeStyle.h
