@@ -55,10 +55,10 @@ typedef NS_ENUM(NSUInteger, HTTPRequestType) {
  @return 发起请求是否成功
  */
 - (BOOL)resquestWith:(HTTPRequestType)resquestType
-             withURL:(NSString *)strURL
+             withURL:(NSString *_Nullable)strURL
           withParams:(nullable id)parameters
-             success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-             failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+             success:(nullable void (^)(NSURLSessionDataTask * _Nullable task, id _Nullable responseObject))success
+             failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error))failure;
 
 #pragma mark -  upload image
 
@@ -73,12 +73,12 @@ typedef NS_ENUM(NSUInteger, HTTPRequestType) {
  @param failure 失败block
  @return 请求是否发起成功
  */
-- (BOOL)uploadImageWithData:(NSData *)imageData
-                    withURL:(NSString *)strURL
+- (BOOL)uploadImageWithData:(NSData *_Nullable)imageData
+                    withURL:(NSString *_Nullable)strURL
                  withParams:(nullable id)parameters
                    progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
-                    success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                    failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                    success:(void (^_Nullable)(NSURLSessionDataTask * _Nullable task, id _Nullable responseObject))success
+                    failure:(void (^_Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error))failure;
 
 
 
@@ -95,14 +95,14 @@ typedef NS_ENUM(NSUInteger, HTTPRequestType) {
  @param failure 上传失败block
  @return 是否成功发起请求
  */
-- (BOOL)uploadFileWithFileData:(NSData *)fileData
-                       withURL:(NSString *)strURL
+- (BOOL)uploadFileWithFileData:(NSData *_Nullable)fileData
+                       withURL:(NSString *_Nullable)strURL
                     withParams:(nullable id)parameters
-                  withfileName:(NSString *)fileName
-                  withMimeType:(NSString *)mimeType
+                  withfileName:(NSString *_Nullable)fileName
+                  withMimeType:(NSString *_Nullable)mimeType
                    progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
-                    success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                    failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                    success:(void (^_Nullable)(NSURLSessionDataTask * _Nullable task, id _Nullable responseObject))success
+                    failure:(void (^_Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error))failure;
 
 #pragma mark -  download
 
@@ -114,9 +114,9 @@ typedef NS_ENUM(NSUInteger, HTTPRequestType) {
  @param complet 完成block
  @return 是否请求成功
  */
-- (BOOL)dowloadFileWithURL:(NSString *)strURL
-                  progress:(void (^)(NSProgress *downloadProgress))
+- (BOOL)dowloadFileWithURL:(NSString *_Nullable)strURL
+                  progress:(void (^_Nullable)(NSProgress * _Nullable downloadProgress))
 downloadProgressBlock
-         completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))complet;
+         completionHandler:(void (^_Nullable)(NSURLResponse * _Nullable response, NSURL * _Nullable filePath, NSError * _Nullable error))complet;
 
 @end

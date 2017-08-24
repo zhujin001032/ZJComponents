@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImage *image = [UIImage  imageWithColor:[UIColor redColor]];
+    UITableView *table = [UITableView new];
+    [self loadRefreshHeader:table action:@selector(refresh)];
+    UIImageView *imgView = [UIImageView new];
+    [imgView sd_setImageWithURL:nil placeholderImage:image];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,12 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJComponents'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'ZJComponents 包含网络请求组件，常用工具组件，功能性组件开发中'
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.description      = '满足项目开发大部分需求，刷新，数据存储，json——>model,webIamge load,color... 不定期更新中。。。'
   s.homepage         = 'https://github.com/zhujin001032/ZJComponents'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jason He' => 'zhujin001xb@163.con' }
@@ -42,7 +39,15 @@ TODO: Add long description of the pod here.
       util.resource_bundles = {
          'UtilComponent' =>['UtilComponent/Assets/*.png']
       }
-      #      UtilsComponent.dependency 'SAMKeychain','~> 1.5.2'
+      util.dependency 'SAMKeychain','~> 1.5.2'
+      #Refresh
+      util.dependency 'MJRefresh'
+      #model
+      util.dependency 'MJExtension'
+      util.dependency 'SVProgressHUD'
+      util.dependency 'IQKeyboardManager'
+      util.dependency 'LKDBHelper'
+      util.dependency 'SDWebImage'
     end
 
 end
